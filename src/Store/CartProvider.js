@@ -15,7 +15,6 @@ const cartReducer = (state, action) => {
       items: updatedItems,
       totalAmout: updatedTotalAmout,
     };
-  } else if (action.type === 'REMOVE') {
   }
   return defaultCartState;
 };
@@ -42,7 +41,7 @@ const CartProvider = (props) => {
 
   return (
     <CartContext.Provider value={cartContext}>
-      {props.chidlren}
+      {props.children}
     </CartContext.Provider>
   );
 };
